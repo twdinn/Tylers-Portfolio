@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background-color: #f78f3f;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#e23636, #f78f3f);
+  width: 100%;
+  height: auto;
+}
+
+#hero-search {
+  width: 110px;
+}
+
+button {
+  background-color: #518cca;
+  color: #000000;
+}
+
+#hero-search-btn {
+  margin: 10px;
+  background-color: #518cca;
+}
+
+h2,
+p {
+  color: #504a4a;
+  font-weight: 700;
+}
