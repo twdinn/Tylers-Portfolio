@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/44217af3d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Gary Blue's Diner</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <!-- checkbox to control nav using hamburger-menu -->
+      <input type="checkbox" class="checkbox" id="click" hidden />
+      <!-- sidebar -->
+      <div class="sidebar">
+        <label for="click">
+          <span class="hamburger-menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </span>
+        </label>
+        <ul class="social-icons">
+          <li>
+            <a href="facebook.html" class="social-links"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="twitter.html" class="social-links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="instagram.html" class="social-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="year">2022</div>
+      </div>
+      <!-- end of sidebar -->
+      <!-- navbar -->
+
+      <nav class="nav">
+        <div class="nav-header">
+          <h1 class="nav-heading">Gary Blue's Diner</h1>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="./index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="./menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="order-online.html" class="nav-link">Order Online</a>
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; 2022. Gary Blue's Diner</p>
+      </nav>
+    </div>
+    <!-- end of navbar -->
+    <!-- header -->
+    <header class="header">
+      <div class="gary-blue">
+        <div>
+          <i class="fa-solid fa-burger fa-7x"></i>
+        </div>
+        <h3 class="diner-heading">Gary Blue's Diner</h3>
+      </div>
+      <div class="diner-content">
+        <div class="location">Located on 123 Main Rd Goulds</div>
+        <div class="hours">
+          <div class="weekday">
+            Mon-Fri: <span class="weekday-time">9am-11pm</span>
+          </div>
+          <div class="weekend">
+            Sat-Sun: <span class="weekend-time">11am-11pm</span>
+          </div>
+        </div>
+        <div class="summary">
+          Established in 1992, Gary Blue's Diner the place to be for great food,
+          great atmosphere and awesome people.
+        </div>
+        <form action="order-online.html">
+          <button class="order-btn">Order Online</button>
+        </form>
+      </div>
+    </header>
+    <!-- end of header -->
+  </body>
+</html>

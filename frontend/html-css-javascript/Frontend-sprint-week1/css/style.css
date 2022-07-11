@@ -1,0 +1,401 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* sidebar */
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #49111c;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  height: 0.2rem;
+  width: 2rem;
+  background-color: #0a0908;
+  margin-bottom: 0.6rem;
+  transition: width 0.3s;
+}
+
+.hamburger-menu:hover .line {
+  width: 2.5rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-links {
+  font-size: 2rem;
+  color: #5e503f;
+  transition: color 0.3s;
+}
+
+.social-links:hover {
+  color: #a9927d;
+}
+
+/* end of sidebar */
+
+/* nav */
+.nav {
+  position: fixed;
+  left: -32rem;
+  width: 40rem;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.5), rgba(10, 9, 8, 1)),
+    url(/img/diner.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  transition: left 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+  z-index: 5;
+}
+
+.checkbox:checked ~ .nav {
+  left: 8rem;
+}
+
+.nav-heading {
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 6.5rem;
+  letter-spacing: 0.2rem;
+  color: #5e503f;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #f2f4f3;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #5e503f;
+  opacity: 0.7;
+}
+
+.copyright {
+  color: #f2f4f3;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* end of nav */
+
+/* header */
+
+.gary-blue {
+  display: flex;
+  cursor: pointer;
+}
+
+.fa-burger {
+  color: #5e503f;
+  opacity: 0.5;
+}
+
+.header {
+  margin-left: 8rem;
+  height: 100vh;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)),
+    url(/img/background.jpg) center no-repeat;
+  background-size: cover;
+}
+.diner-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #49111c;
+  letter-spacing: 0.2rem;
+}
+
+.diner-content {
+  color: #f2f4f3;
+  height: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.location {
+  font-size: 3rem;
+}
+
+.hours {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: 1rem;
+}
+
+.weekday-time,
+.weekend-time {
+  font-weight: 700;
+}
+
+.summary {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.order-btn {
+  margin-top: 1rem;
+  width: 15rem;
+  padding: 1.2rem 2rem;
+  font-size: 1.5rem;
+  color: #0a0908;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  background: linear-gradient(to right, #a9927d, #5e503f);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.order-btn:hover {
+  background: linear-gradient(to left, #a9927d, #5e503f);
+}
+
+.order-btn:active {
+  transform: translateY(0.2rem);
+}
+
+.order-btn a:link {
+  text-decoration: none;
+  color: #0a0908;
+}
+
+.order-btn a:visited {
+  text-decoration: none;
+  color: #0a0908;
+}
+
+@media (max-width: 1105px) {
+  .summary {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1036px) {
+  .summary {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .fa-burger {
+    font-size: 4rem;
+    margin-top: 1.5rem;
+  }
+  .diner-heading {
+    font-size: 2.5rem;
+  }
+  .location {
+    font-size: 2rem;
+  }
+
+  .hours {
+    font-size: 1.3rem;
+  }
+
+  .summary {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 763px) {
+  .sidebar {
+    width: 6rem;
+  }
+  .nav {
+    left: -34rem;
+    width: 30rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 6rem;
+  }
+
+  .nav-heading {
+    font-size: 2.5rem;
+  }
+  .nav-list {
+    height: 8rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    margin-left: 6rem;
+  }
+  .location {
+    font-size: 1.8rem;
+  }
+
+  .hours {
+    font-size: 1.2rem;
+  }
+
+  .summary {
+    font-size: 0.8rem;
+  }
+  .order-btn {
+    width: 13rem;
+    font-size: 1rem;
+  }
+
+  @media (max-width: 622px) {
+    .location {
+      font-size: 1.8rem;
+    }
+
+    .hours {
+      font-size: 1.2rem;
+    }
+
+    .summary {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 501px) {
+  .location {
+    font-size: 1.6rem;
+  }
+
+  .hours {
+    font-size: 1.1rem;
+  }
+
+  .summary {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 446px) {
+  .sidebar {
+    width: 4rem;
+  }
+  .nav {
+    left: -36rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 4rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+  .location {
+    font-size: 1.5rem;
+  }
+
+  .hours {
+    font-size: 1rem;
+  }
+
+  .summary {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .fa-burger {
+    font-size: 3rem;
+  }
+  .diner-heading {
+    font-size: 1.5rem;
+    margin-top: 2.2rem;
+  }
+  .nav {
+    width: 20rem;
+  }
+  .nav-heading {
+    font-size: 1.7rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+  .location {
+    font-size: 1.4rem;
+  }
+
+  .hours {
+    font-size: 0.9rem;
+  }
+
+  .summary {
+    font-size: 0.5rem;
+  }
+}
+@media (max-width: 311px) {
+  .location {
+    font-size: 1.3rem;
+  }
+
+  .hours {
+    font-size: 0.8rem;
+  }
+
+  .summary {
+    font-size: 0.4rem;
+    font-weight: 500;
+  }
+}

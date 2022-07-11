@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Menu Page */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0a0908;
+}
+
+/* sidebar */
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #49111c;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  height: 0.2rem;
+  width: 2rem;
+  background-color: #0a0908;
+  margin-bottom: 0.6rem;
+  transition: width 0.3s;
+}
+
+.hamburger-menu:hover .line {
+  width: 2.5rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-links {
+  font-size: 2rem;
+  color: #5e503f;
+  transition: color 0.3s;
+}
+
+.social-links:hover {
+  color: #a9927d;
+}
+
+/* end of sidebar */
+
+/* nav */
+.nav {
+  position: fixed;
+  left: -32rem;
+  width: 40rem;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.5), rgba(10, 9, 8, 1)),
+    url(/img/diner.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  transition: left 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+}
+
+.checkbox:checked ~ .nav {
+  left: 8rem;
+}
+
+.nav-heading {
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 6.5rem;
+  letter-spacing: 0.2rem;
+  color: #5e503f;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #f2f4f3;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #5e503f;
+  opacity: 0.7;
+}
+
+.copyright {
+  color: #f2f4f3;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* end of nav */
+
+/* menu-items */
+
+.menu-items-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-left: 7rem;
+}
+
+.menu-item {
+  width: 25rem;
+  height: 45rem;
+  position: relative;
+  background: #f2f4f3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: background-color 0.3s;
+}
+.menu-item > * {
+  padding: 1rem;
+}
+.menu-item-pic {
+  height: 20rem;
+  width: 20rem;
+  border: 0.5rem double #5e503f;
+  border-radius: 50%;
+  padding: 1rem;
+}
+.menu-item-name {
+  padding: 2rem 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 0.1rem 0rem 0.2rem #0a0908;
+}
+.pic-1 {
+  background: url(/img/chicken-burger.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-2 {
+  background: url(/img/chesseburger.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-3 {
+  background: url(/img/wings.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-4 {
+  background: url(/img/fish-and-chips.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-5 {
+  background: url(/img/mozzarella-sticks.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-6 {
+  background: url(/img/chicken-tenders.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-7 {
+  background: url(/img/bacon-eggs.jpg) center no-repeat;
+  background-size: cover;
+}
+.pic-8 {
+  background: url(/img/pancakes.jpg) center no-repeat;
+  background-size: cover;
+}
+
+.menu-item:hover {
+  background-color: #a9927d;
+  color: #f2f4f3;
+  box-shadow: 0px 0px 11px 5px #000000;
+}
+
+.menu-item-description {
+  line-height: 2.5rem;
+  font-size: 1rem;
+}
+/* end of menu-item */
+
+@media (max-width: 763px) {
+  .sidebar {
+    width: 6rem;
+  }
+  .nav {
+    left: -34rem;
+    width: 30rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 6rem;
+  }
+
+  .nav-heading {
+    font-size: 2.5rem;
+  }
+  .nav-list {
+    height: 8rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    margin-left: 6rem;
+  }
+}
+@media (max-width: 446px) {
+  .sidebar {
+    width: 4rem;
+  }
+  .nav {
+    left: -36rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 4rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .nav {
+    width: 20rem;
+  }
+  .nav-heading {
+    font-size: 1.7rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+}

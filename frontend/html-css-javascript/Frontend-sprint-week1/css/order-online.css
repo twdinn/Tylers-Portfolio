@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Menu Page */
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #0a0908;
+}
+
+/* sidebar */
+.sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #49111c;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.hamburger-menu {
+  display: block;
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  height: 0.2rem;
+  width: 2rem;
+  background-color: #0a0908;
+  margin-bottom: 0.6rem;
+  transition: width 0.3s;
+}
+
+.hamburger-menu:hover .line {
+  width: 2.5rem;
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.social-links {
+  font-size: 2rem;
+  color: #5e503f;
+  transition: color 0.3s;
+}
+
+.social-links:hover {
+  color: #a9927d;
+}
+
+/* end of sidebar */
+
+/* nav */
+.nav {
+  position: fixed;
+  left: -32rem;
+  width: 40rem;
+  height: 100%;
+  background: linear-gradient(to top, rgba(10, 9, 8, 0.5), rgba(10, 9, 8, 1)),
+    url(/img/diner.jpg) center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+  transition: left 0.8s cubic-bezier(0.5, 0, 0, 0.5);
+}
+
+.checkbox:checked ~ .nav {
+  left: 8rem;
+}
+
+.nav-heading {
+  font-family: "Libre Baskerville", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-top: 6.5rem;
+  letter-spacing: 0.2rem;
+  color: #5e503f;
+  align-items: center;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  height: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-link {
+  color: #f2f4f3;
+  font-size: 2.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #5e503f;
+  opacity: 0.7;
+}
+
+.copyright {
+  color: #f2f4f3;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* end of nav */
+
+/* order form */
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+th {
+  font-size: 3rem;
+  color: #f2f4f3;
+}
+td {
+  border: 0.5rem solid #5e503f;
+}
+h1 {
+  font-size: 1.5rem;
+  color: #f2f4f3;
+}
+
+.order-label {
+  font-size: 3rem;
+  color: #49111c;
+}
+
+.quantity {
+  margin-left: 5rem;
+  width: 3rem;
+}
+
+/* end of order form */
+
+@media (max-width: 763px) {
+  .sidebar {
+    width: 6rem;
+  }
+  .nav {
+    left: -34rem;
+    width: 30rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 6rem;
+  }
+
+  .nav-heading {
+    font-size: 2.5rem;
+  }
+  .nav-list {
+    height: 8rem;
+  }
+
+  .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .header {
+    margin-left: 6rem;
+  }
+}
+
+@media (max-width: 640px) {
+  th {
+    font-size: 2rem;
+  }
+  .order-label {
+    font-size: 1.5rem;
+  }
+  .quantity {
+    margin-left: 2.5rem;
+    width: 3rem;
+  }
+}
+@media (max-width: 446px) {
+  .sidebar {
+    width: 4rem;
+  }
+  .nav {
+    left: -36rem;
+  }
+
+  .checkbox:checked ~ .nav {
+    left: 4rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+}
+
+@media (max-width: 365px) {
+  .nav {
+    width: 20rem;
+  }
+  .nav-heading {
+    font-size: 1.7rem;
+  }
+
+  .header {
+    margin-left: 4rem;
+  }
+  #order-form {
+    margin-left: 3rem;
+  }
+  th {
+    font-size: 1.5rem;
+  }
+  .order-label {
+    font-size: 1rem;
+  }
+  .quantity {
+    margin-left: 1.8rem;
+    width: 2.5rem;
+  }
+}

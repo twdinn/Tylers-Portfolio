@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/order-online.css" />
+    <script
+      src="https://kit.fontawesome.com/44217af3d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/script.js"></script>
+    <title>Gary Blue's Diner - Order Online</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <input type="checkbox" class="checkbox" id="click" hidden />
+      <!-- sidebar -->
+      <div class="sidebar">
+        <label for="click">
+          <span class="hamburger-menu">
+            <span class="line line-1"></span>
+            <span class="line line-2"></span>
+            <span class="line line-3"></span>
+          </span>
+        </label>
+
+        <ul class="social-icons">
+          <li>
+            <a href="facebook.html" class="social-links"
+              ><i class="fa-brands fa-facebook-f"></i
+            ></a>
+          </li>
+          <li>
+            <a href="twitter.html" class="social-links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+          </li>
+          <li>
+            <a href="instagram.html" class="social-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </li>
+        </ul>
+        <div class="year">2022</div>
+      </div>
+      <!-- end of sidebar -->
+      <!-- navbar -->
+
+      <nav class="nav">
+        <div class="nav-header">
+          <h1 class="nav-heading">Gary Blue's Diner</h1>
+        </div>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="menu.html" class="nav-link">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a href="order-online.html" class="nav-link">Order Online</a>
+          </li>
+        </ul>
+
+        <p class="copyright">&copy; 2022. Gary Blue's Diner</p>
+      </nav>
+    </div>
+    <!-- end of navbar -->
+    <!-- order table -->
+    <main class="main" id="main">
+      <form id="order-form">
+        <table class="table">
+          <tr>
+            <th class="table-heading">Menu Item</th>
+            <th class="table-heading">Quantity</th>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="big-gary" class="order-choose" />
+              <label for="big-gary" class="order-label"> Big Gary</label>
+            </td>
+            <td>
+              <input type="text" id="big-gary-quantity" class="quantity" />
+
+              >
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="checkbox"
+                id="Bacon-Chesseburger"
+                class="order-choose"
+              />
+              <label for="Bacon-Chesseburger" class="order-label"
+                >Bacon Chesseburger</label
+              >
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="Chicken-Wings" class="order-choose" />
+              <label for="Chicken-Wings" class="order-label"
+                >Chicken Wings</label
+              >
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="fish-chips" class="order-choose" />
+              <label for="fish-chips" class="order-label">Fish and Chips</label>
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input
+                type="checkbox"
+                id="mozzarella-sticks"
+                class="order-choose"
+              />
+              <label for="mozzarella-sticks" class="order-label"
+                >Mozzarella Sticks</label
+              >
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="tenders" class="order-choose" />
+              <label for="tenders" class="order-label">Chicken Tenders</label>
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" id="bacon-eggs" class="order-choose" />
+              <label for="bacon-eggs" class="order-label">Bacon and Eggs</label>
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <input type="checkbox" id="pancakes" class="order-choose" />
+              <label for="pancakes" class="order-label">Pancakes</label>
+            </td>
+            <td>
+              <input type="text" class="quantity" />
+            </td>
+          </tr>
+        </table>
+        <br />
+        <br />
+        <input type="submit" value="submit" onclick="orderSubmitted()" />
+      </form>
+    </main>
+
+    <!-- end of order table-->
+  </body>
+</html>
